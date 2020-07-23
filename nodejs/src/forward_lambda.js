@@ -31,7 +31,13 @@ exports.handler = (event, context, callback) => {
                 });
 
                 res.on('end', () => {
-                    resolve(JSON.parse(responseBody).loggedIn);
+                    console.log("response status", res.statusCode)
+                    console.log("response body", responseBody);
+                    if (200 === res.statusCode) {
+                        resolve(JSON.parse(responseBody).loggedIn);
+                    } else {
+                        reject();
+                    }
                 });
             });
 
