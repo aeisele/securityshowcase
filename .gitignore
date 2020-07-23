@@ -37,4 +37,4 @@ build/
 mvnw*
 
 ### NodeJS ###
-nodejs/out
+out
