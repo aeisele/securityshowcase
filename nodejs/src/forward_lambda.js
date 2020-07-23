@@ -12,7 +12,7 @@ exports.handler = (event, context, callback) => {
         const options = {
             hostname: 'localhost',
             port: 8443,
-            path: '/loggedin',
+            path: '/loggedIn',
             method: 'GET',
             timeout: timeout,
             headers: {

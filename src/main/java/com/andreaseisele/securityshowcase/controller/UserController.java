@@ -10,7 +10,7 @@ import java.util.Map;
 @RestController
 public class UserController {
 
-    @GetMapping("/loggedin")
+    @GetMapping("/loggedIn")
     public Map<String, Boolean> isLoggedIn(@AuthenticationPrincipal User user) throws InterruptedException {
         //Thread.sleep(10 * 1000);
         return Map.of("loggedIn", user != null);
